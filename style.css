@@ -229,3 +229,16 @@ h1 {
 body {
   overflow-x: hidden;
 }
+
+.nav-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .nav-controls {
+    gap: 1rem;
+  }
+}
