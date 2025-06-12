@@ -242,3 +242,24 @@ body {
     gap: 1rem;
   }
 }
+/* Ocultar/mostrar según el dispositivo */
+.nav-desktop {
+  display: inline-block;
+}
+
+.nav-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav-desktop {
+    display: none;
+  }
+
+  .nav-mobile {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 1rem 0;
+  }
+}
