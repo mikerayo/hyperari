@@ -27,18 +27,24 @@
   </section>
 
 <div class="ferrari-container">
+  <!-- Flechas laterales visibles solo en escritorio -->
+  <button class="nav-btn nav-desktop" id="prevBtn">←</button>
+
   <div class="ferrari-card">
     <img id="ferrariImage" src="img/2.png" alt="Ferrari" class="ferrari-img"/>
     <h2 id="ferrariName">Ferrari Verde Degen</h2>
     <p>Price: <span id="ferrariPrice">$450,000</span></p>
   </div>
 
-  <!-- Aquí van ahora las flechas -->
-  <div class="nav-controls">
-    <button class="nav-btn" id="prevBtn">←</button>
-    <button class="nav-btn" id="nextBtn">→</button>
-  </div>
+  <button class="nav-btn nav-desktop" id="nextBtn">→</button>
 </div>
+
+<!-- Controles móviles debajo del coche -->
+<div class="nav-controls nav-mobile">
+  <button class="nav-btn" id="prevBtnMobile">←</button>
+  <button class="nav-btn" id="nextBtnMobile">→</button>
+</div>
+
 
       
 
