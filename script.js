@@ -9,10 +9,50 @@ const ferrariX1000 = document.getElementById("ferrariX1000");
 const quoteDisplay = document.getElementById("degenQuote");
 
 const ferraris = [
-  { name: 'Ferrari Verde Degen', price: 450000, image: 'img/2.png' },
-  { name: 'FERRARI F40 1987', price: 2500000, image: 'img/1.jpg' },
-  { name: '1957 FERRARI 250 GT CALIFORNIA', price: 18500000, image: 'img/3.jpg' }
+  {
+    name: 'Ferrari California T',
+    price: 120000,
+    image: 'img/1.png',
+    description: 'For the degen who hasn’t hit 100x yet but still wants to flex at the roundabout. Classic vibes, alpha look.'
+  },
+  {
+    name: 'Ferrari 458 Italia',
+    price: 225000,
+    image: 'img/2.png',
+    description: 'V8 screams louder than bears in a bull market. Perfect for exit scams with elegance.'
+  },
+  {
+    name: 'Ferrari Roma',
+    price: 247000,
+    image: 'img/3.png',
+    description: 'Smoother than a DAO proposal passed at 3am. Built for staking... romantic dinners and bags.'
+  },
+  {
+    name: 'Ferrari F8 Tributo',
+    price: 325000,
+    image: 'img/4.png',
+    description: 'Twin-turbo beast. Ideal for escaping FUD at warp speed. Airdrops respect with every gear shift.'
+  },
+  {
+    name: 'Ferrari 812 Superfast',
+    price: 435000,
+    image: 'img/5.png',
+    description: 'V12 hits harder than a shitcoin mooning overnight. Sounds like a smart contract going nuclear.'
+  },
+  {
+    name: 'Ferrari SF90 Stradale',
+    price: 525000,
+    image: 'img/6.png',
+    description: 'Nearly 1,000 horses and F1 tech. If this was a token, it’d be listed on Binance as $VRROOOM.'
+  },
+  {
+    name: 'Ferrari LaFerrari',
+    price: 3000000,
+    image: 'img/7.png',
+    description: 'The holy grail of crypto garages. Only for OG whales. If you see it IRL, someone just 1000x’d.'
+  }
 ];
+
 
 let currentPrice = 0;
 let currentMarketCap = 0;
@@ -22,8 +62,9 @@ let currentFerrari = 0;
 function updateFerrariDisplay() {
   const car = ferraris[currentFerrari];
   document.getElementById("ferrariName").textContent = car.name;
-  document.getElementById("ferrariPrice").textContent = "Price: $" + car.price.toLocaleString();
+  document.getElementById("ferrariPrice").textContent = "$" + car.price.toLocaleString();
   document.getElementById("ferrariImage").src = car.image;
+  document.getElementById("ferrariDescription").textContent = car.description || '';
   updateFerrariCount();
 }
 
