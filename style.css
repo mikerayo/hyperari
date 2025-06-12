@@ -138,7 +138,7 @@ h1 {
   align-items: center;
   margin-top: 30px;
   gap: 50px;
-  transform: translateX(-800px); /* Puedes ajustar más si necesitas */
+  flex-wrap: wrap;
 }
 
 .title {
@@ -147,6 +147,8 @@ h1 {
   text-shadow: 0 0 10px var(--primary);
   font-family: 'Orbitron', sans-serif;
   margin: 0;
+  max-width: 90vw;
+  overflow-wrap: break-word;
 }
 
 .header-buttons {
@@ -169,4 +171,61 @@ h1 {
 .header-btn:hover {
   background-color: var(--primary);
   color: #000;
+}
+
+@media (max-width: 768px) {
+  header, .header {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .header-buttons {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .ferrari-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .ferrari-card {
+    width: 90%;
+  }
+
+  .ferrari-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .nav-btn {
+    font-size: 1.5rem;
+    padding: 0.4rem 1rem;
+  }
+
+  .dashboard-section {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  .progress-bar {
+    height: 12px;
+  }
+
+  h1, .title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  #intro {
+    font-size: 0.9rem;
+    padding: 0 1rem;
+  }
+}
+body {
+  overflow-x: hidden;
 }
