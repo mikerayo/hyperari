@@ -10,13 +10,12 @@
 <body>
   <header>
     <h1>NO RISK NO RARI</h1>
-      <div class="header-buttons">
-    <a href="https://twitter.com/tuCuenta" class="header-btn" target="_blank">Twitter</a>
-    <a href="https://t.me/tuGrupo" class="header-btn" target="_blank">Telegram</a>
-    <a href="https://dexscreener.com/hyperevm/0x738dD55C272b0B686382F62DD4a590056839F4F6" class="header-btn" target="_blank">Chart</a>
-  </div>
+    <div class="header-buttons">
+      <a href="https://twitter.com/tuCuenta" class="header-btn" target="_blank">Twitter</a>
+      <a href="https://t.me/tuGrupo" class="header-btn" target="_blank">Telegram</a>
+      <a href="https://dexscreener.com/hyperevm/0x738dD55C272b0B686382F62DD4a590056839F4F6" class="header-btn" target="_blank">Chart</a>
+    </div>
     <button id="connectBtn">Connect Wallet</button>
-    
   </header>
 
   <section id="intro">
@@ -26,27 +25,24 @@
     and if this shit really moons.</p>
   </section>
 
-<div class="ferrari-container">
-  <!-- Flechas laterales visibles solo en escritorio -->
-  <button class="nav-btn nav-desktop" id="prevBtn">←</button>
+  <div class="ferrari-container">
+    <!-- Desktop arrows -->
+    <button class="nav-btn nav-desktop" id="prevBtn">←</button>
 
-  <div class="ferrari-card">
-    <img id="ferrariImage" src="img/2.png" alt="Ferrari" class="ferrari-img"/>
-    <h2 id="ferrariName">Ferrari Verde Degen</h2>
-    <p>Price: <span id="ferrariPrice">$450,000</span></p>
+    <div class="ferrari-card">
+      <img id="ferrariImage" src="img/2.png" alt="Ferrari" class="ferrari-img"/>
+      <h2 id="ferrariName">Ferrari Verde Degen</h2>
+      <p>Price: <span id="ferrariPrice">$450,000</span></p>
+    </div>
+
+    <button class="nav-btn nav-desktop" id="nextBtn">→</button>
   </div>
 
-  <button class="nav-btn nav-desktop" id="nextBtn">→</button>
-</div>
-
-<!-- Controles móviles debajo del coche -->
-<div class="nav-controls nav-mobile">
-  <button class="nav-btn" id="prevBtnMobile">←</button>
-  <button class="nav-btn" id="nextBtnMobile">→</button>
-</div>
-
-
-      
+  <!-- Mobile arrows below -->
+  <div class="nav-controls nav-mobile">
+    <button class="nav-btn" id="prevBtnMobile">←</button>
+    <button class="nav-btn" id="nextBtnMobile">→</button>
+  </div>
 
   <div class="dashboard-container">
     <div class="dashboard-section">
@@ -77,5 +73,10 @@
   </div>
 
   <script src="script.js"></script>
+  <script>
+    // Reenlazar botones móviles
+    document.getElementById("prevBtnMobile").onclick = () => document.getElementById("prevBtn").click();
+    document.getElementById("nextBtnMobile").onclick = () => document.getElementById("nextBtn").click();
+  </script>
 </body>
 </html>
