@@ -148,3 +148,6 @@ function updateUserFerrariData() {
     quoteDisplay.textContent = getDegenQuote("now");
   }
 }
+
+document.getElementById("prevBtnMobile").onclick = () => document.getElementById("prevBtn").click();
+document.getElementById("nextBtnMobile").onclick = () => document.getElementById("nextBtn").click();
