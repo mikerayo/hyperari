@@ -10,8 +10,8 @@ const quoteDisplay = document.getElementById("degenQuote");
 
 const ferraris = [
   { name: 'Ferrari Verde Degen', price: 450000, image: 'img/2.png' },
-  { name: 'FERRARI F40 1987', price: 2500000, image: 'img/1.JPG' },
-  { name: '1957 FERRARI 250 GT CALIFORNIA', price: 18500000, image: 'img/3.JPG' }
+  { name: 'FERRARI F40 1987', price: 2500000, image: 'img/1.jpg' },
+  { name: '1957 FERRARI 250 GT CALIFORNIA', price: 18500000, image: 'img/3.jpg' }
 ];
 
 let currentPrice = 0;
