@@ -15,6 +15,7 @@ body {
   text-align: center;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 header {
@@ -22,6 +23,7 @@ header {
   justify-content: space-between;
   padding: 1rem 2rem;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 h1 {
@@ -132,25 +134,6 @@ h1 {
   color: var(--soft-white);
 }
 
-.header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 30px;
-  gap: 50px;
-  flex-wrap: wrap;
-}
-
-.title {
-  font-size: 2.2em;
-  color: var(--highlight);
-  text-shadow: 0 0 10px var(--primary);
-  font-family: 'Orbitron', sans-serif;
-  margin: 0;
-  max-width: 90vw;
-  overflow-wrap: break-word;
-}
-
 .header-buttons {
   display: flex;
   gap: 30px;
@@ -173,24 +156,38 @@ h1 {
   color: #000;
 }
 
+/* NAV CONTROL POSITIONING */
+.nav-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 1rem 0;
+}
+
+.nav-mobile {
+  display: none;
+}
+
+.nav-desktop {
+  display: inline-block;
+}
+
+/* RESPONSIVE */
 @media (max-width: 768px) {
-  header, .header {
+  header {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
   }
 
   .header-buttons {
-    flex-direction: row;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .ferrari-container {
     flex-direction: column;
-    align-items: center;
     gap: 1.5rem;
-    margin-top: 1rem;
   }
 
   .ferrari-card {
@@ -199,24 +196,13 @@ h1 {
 
   .ferrari-img {
     width: 100%;
-    height: auto;
-  }
-
-  .nav-btn {
-    font-size: 1.5rem;
-    padding: 0.4rem 1rem;
   }
 
   .dashboard-section {
     width: 95%;
-    padding: 1rem;
   }
 
-  .progress-bar {
-    height: 12px;
-  }
-
-  h1, .title {
+  h1 {
     font-size: 1.5rem;
     text-align: center;
   }
@@ -225,41 +211,12 @@ h1 {
     font-size: 0.9rem;
     padding: 0 1rem;
   }
-}
-body {
-  overflow-x: hidden;
-}
 
-.nav-controls {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-top: 1rem;
-}
-
-@media (max-width: 768px) {
-  .nav-controls {
-    gap: 1rem;
-  }
-}
-/* Ocultar/mostrar según el dispositivo */
-.nav-desktop {
-  display: inline-block;
-}
-
-.nav-mobile {
-  display: none;
-}
-
-@media (max-width: 768px) {
   .nav-desktop {
     display: none;
   }
 
   .nav-mobile {
     display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin: 1rem 0;
   }
 }
