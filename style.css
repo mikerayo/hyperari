@@ -1,0 +1,172 @@
+:root {
+  --primary: #00C5B4;
+  --dark-bg: #003B32;
+  --deep-bg: #001A16;
+  --light-green: #0afa6e;
+  --soft-white: #e0fdfc;
+  --accent: #00ffd0;
+  --highlight: #00ffcc;
+}
+
+body {
+  background: var(--dark-bg);
+  color: var(--soft-white);
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  align-items: center;
+}
+
+h1 {
+  color: var(--light-green);
+  text-shadow: 0 0 10px var(--accent);
+}
+
+#connectBtn {
+  background: transparent;
+  border: 2px solid var(--primary);
+  padding: 8px 14px;
+  color: var(--primary);
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#connectBtn.connected {
+  background-color: var(--primary);
+  color: #000;
+}
+
+#intro {
+  margin-top: 1rem;
+  color: var(--soft-white);
+}
+
+.ferrari-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 2rem;
+}
+
+.ferrari-card {
+  border: 2px solid var(--primary);
+  border-radius: 12px;
+  padding: 1rem;
+  background: var(--deep-bg);
+  box-shadow: 0 0 18px #00c5b466;
+}
+
+.ferrari-img {
+  width: 340px;
+  max-width: 90vw;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.nav-btn {
+  background: transparent;
+  border: 2px solid var(--primary);
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+  color: var(--primary);
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.dashboard-container {
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+
+.dashboard-section {
+  background: var(--deep-bg);
+  border: 2px solid var(--primary);
+  padding: 1rem;
+  margin: 1rem auto;
+  border-radius: 12px;
+  max-width: 900px;
+  box-shadow: 0 0 18px #00c5b488;
+}
+
+.progress-bar {
+  background: #1a3d3a;
+  height: 10px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 0.5rem 0;
+}
+
+.progress-fill {
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  height: 100%;
+  width: 0%;
+  transition: width 0.5s ease-in-out;
+}
+
+.highlight {
+  font-weight: bold;
+  color: var(--accent);
+}
+
+.quote {
+  font-style: italic;
+  color: #36fcd6;
+  margin-top: 1rem;
+}
+
+.flex-summary {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+  color: var(--soft-white);
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  gap: 50px;
+  transform: translateX(-800px); /* Puedes ajustar más si necesitas */
+}
+
+.title {
+  font-size: 2.2em;
+  color: var(--highlight);
+  text-shadow: 0 0 10px var(--primary);
+  font-family: 'Orbitron', sans-serif;
+  margin: 0;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 30px;
+}
+
+.header-btn {
+  padding: 10px 20px;
+  border: 1px solid var(--primary);
+  border-radius: 15px;
+  color: white;
+  background-color: transparent;
+  font-family: 'Orbitron', sans-serif;
+  text-decoration: none;
+  box-shadow: 0 0 10px #00c5b466;
+  transition: background 0.2s ease;
+}
+
+.header-btn:hover {
+  background-color: var(--primary);
+  color: #000;
+}
