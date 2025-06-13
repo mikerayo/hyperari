@@ -241,3 +241,10 @@ h1 {
   margin-top: 0.5rem;
   line-height: 1.4;
 }
+
+
+.contract-address {
+  color: var(--accent);
+  font-family: monospace;
+  margin-top: 0.2rem;
+}
