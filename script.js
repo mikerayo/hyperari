@@ -7,6 +7,7 @@ const ferrariX10 = document.getElementById("ferrariX10");
 const ferrariX100 = document.getElementById("ferrariX100");
 const ferrariX1000 = document.getElementById("ferrariX1000");
 const quoteDisplay = document.getElementById("degenQuote");
+const walletSelect = document.getElementById("walletSelect");
 
 const ferraris = [
   {
@@ -104,10 +105,21 @@ connectBtn.onclick = async () => {
     return;
   }
 
-  if (typeof window.ethereum !== "undefined") {
+  const selected = walletSelect.value;
+  let walletProvider = null;
+
+  if (selected === "rabby") {
+    walletProvider = window.rabby || (window.ethereum && window.ethereum.isRabby ? window.ethereum : null);
+  } else if (selected === "core") {
+    walletProvider = window.avalanche || window.core || (window.ethereum && window.ethereum.isAvalanche ? window.ethereum : null);
+  } else {
+    walletProvider = window.ethereum;
+  }
+
+  if (walletProvider) {
     try {
-      const accounts = await ethereum.request({ method: "eth_requestAccounts" });
-      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      const accounts = await walletProvider.request({ method: "eth_requestAccounts" });
+      const provider = new ethers.providers.Web3Provider(walletProvider);
       const address = accounts[0];
       connectBtn.textContent = shortenAddress(address);
       connectBtn.classList.add("connected");
@@ -142,7 +154,7 @@ connectBtn.onclick = async () => {
       alert("Wallet connection error.");
     }
   } else {
-    alert("Please install MetaMask");
+    alert("Please install MetaMask, Rabby or Core Wallet");
   }
 };
 
