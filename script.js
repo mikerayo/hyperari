@@ -170,7 +170,7 @@ function getDegenQuote(stage) {
 }
 
 async function fetchTokenData() {
-  const res = await fetch("https://api.dexscreener.com/tokens/v1/hyperevm/0x738dD55C272b0B686382F62DD4a590056839F4F6");
+  const res = await fetch("https://api.dexscreener.com/tokens/v1/hyperevm/");
   const data = await res.json();
   const token = data[0];
   currentPrice = parseFloat(token.priceUsd);
